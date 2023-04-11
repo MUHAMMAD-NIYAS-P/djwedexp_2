@@ -1,0 +1,29 @@
+{% extends 'firstApp/base.html' %}
+
+{% block content %}
+
+    
+        <h1>Have a look at our users!</h1>
+        <br>
+
+        {% for user in users %}
+            <div class="card">
+            <div class="card-header">
+                User Name: <strong>{{ user }}</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">User Details:</h5>
+                <ul>
+                    <li>First Name: {{ user.first_name }}  </li>
+                    <li>Last Name: {{ user.last_name }}</li>
+                    <li>Email: {{ user.email }}</li>
+                    <li>Phone: {{ user.phone }}</li>
+                    <li>Address: {{ user.address }}</li>
+                </ul>
+            </div>
+            </div> <br>
+        {% endfor %}
+
+    
+
+{% endblock %}
